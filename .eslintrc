@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+    "no-underscore-dangle": ["error", { "allow": ["_id", "_doc"] }],
+    "no-prototype-builtins": "warn",
+    "no-restricted-properties": "off",
+    "operator-linebreak": "off",
+    "brace-style": ["error", "stroustrup"],
+    "indent": ["error", 2],
+    "max-len": ["error", { "code": 160, "tabWidth": 2 }]
+  },
+  
+}

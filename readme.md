@@ -18,6 +18,7 @@ Rabbitmq-mail-consumer-server uses a number of open source projects to work prop
 
 ### For Blacklist
 You need to add a mail adress to redis.
+> /unsubscribe?email=(with encrypted mail)
 ![Redis](https://i.imgur.com/saREwA7.png)
 ### Installation
 

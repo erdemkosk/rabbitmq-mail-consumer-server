@@ -43,6 +43,6 @@ app.get('/unsubscribe', (req, res) => {
   });
 });
 
-app.listen(config.port, () => console.log(`[*] Health url on /health ${config.port}`));
+app.listen(config.port, () => console.log(`[*] rabbitmq-mail-consumer-server running on ${config.port}`));
 
 connectAndListenRabbitMQ();

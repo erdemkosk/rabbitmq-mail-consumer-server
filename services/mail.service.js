@@ -36,8 +36,8 @@ async function checkMailInBlacklist({ mailInfo }) {
   if (!config.considerBlacklist) {
     return inBlackList;
   }
-  // redisService.getClient().SADD('mail_blacklist', 'testme-app@yandex.ru');
-    inBlackList = await redisService.client.sismember('mail_blacklist', mailInfo.email);
+
+  inBlackList = await redisService.client.sismember('mail_blacklist', mailInfo.email);
 
 
   if (inBlackList) {
@@ -66,6 +66,11 @@ async function sendMail({ mailInfo }) {
   });
 }
 
+async function addMailToUnsubscribe({ decryptedEmail }) {
+  await redisService.client.sadd('mail_blacklist', decryptedEmail);
+}
+
 module.exports = {
   sendMail,
+  addMailToUnsubscribe,
 };

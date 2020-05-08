@@ -25,9 +25,9 @@ app.get('/unsubscribe', (req, res) => {
   try {
     decryptedEmail = decrypt(email);
   }
-  // eslint-disable-next-line no-empty
-  catch (error) {
 
+  catch (error) {
+    console.log(error);
   }
 
   if (!email || !decryptedEmail) {

@@ -1,5 +1,7 @@
+const Cryptr = require('cryptr');
 const config = require('../config');
-const { encrypt } = require('./cyrpto.logic');
+
+const cryptr = new Cryptr(config.url);
 
 function generateMessageWithType({ mailInfo }) {
   const message = {
@@ -16,7 +18,7 @@ function generateMessageWithType({ mailInfo }) {
       ...message.context,
       ...{
         nameSurname: mailInfo.nameSurname,
-        unsubscribe: `${config.url}/unsubscribe?email=${encrypt(mailInfo.email)}`,
+        unsubscribe: `${config.url}/unsubscribe?email=${cryptr.encrypt(mailInfo.email)}`,
       },
     };
     break;
@@ -25,7 +27,7 @@ function generateMessageWithType({ mailInfo }) {
       ...message.context,
       ...{
         nameSurname: mailInfo.nameSurname,
-        unsubscribe: `${config.url}/unsubscribe?email=${encrypt(mailInfo.email)}`,
+        unsubscribe: `${config.url}/unsubscribe?email=${cryptr.encrypt(mailInfo.email)}`,
       },
     };
     break;

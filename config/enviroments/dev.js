@@ -1,6 +1,6 @@
 module.exports = {
   env: 'dev',
-  url: 'http://localhost:5000' || process.env.URL,
+  url: process.env.URL || 'http://localhost:5000',
   port: process.env.PORT || 5000,
   considerBlacklist: true,
   rabbitmq: {

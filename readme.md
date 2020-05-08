@@ -71,6 +71,8 @@ If In Blacklist:
 | REDIS_HOST   | redis url      
 | REDIS_PASS | redis password
 | REDIS_PORT | redis port
+| URL | unsubscribe url path
+
 
 ### Mail Types
 

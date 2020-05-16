@@ -22,11 +22,18 @@ const options = {
     layoutsDir: 'templates/',
     defaultLayout: '',
     partialsDir: 'templates/',
+    helpers: {
+      messageHelper(nameSurname, message) {
+        return message.replace('nameSurname', nameSurname);
+      },
+      json(value) {
+        return JSON.stringify(value);
+      },
+    },
   },
   viewPath: 'templates/',
   extName: '.hbs',
 };
-
 
 transport.use('compile', hbs(options));
 

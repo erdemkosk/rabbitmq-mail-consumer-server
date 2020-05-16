@@ -36,10 +36,20 @@ $ node app
 You need to send messages from your server to rabbit mq channel when you need to send mail.
 Forget Password Mail:
 ```sh
- rabbitMq.sendRabbitMQ('mailChannel', JSON.stringify({
+  rabbitMq.sendRabbitMQ('mailChannel', JSON.stringify({
     email: 'testme-app@yandex.ru',
     nameSurname: 'Erdem Köşk',
     type: 'forget',
+    appName: 'Test Me',
+    forgetTitle: 'Şifreni Unutmuşsun :(',
+    forgetMessage: '<b>nameSurname</b> şifreni unutmuşsun! Aşağıdaki adımları takip edelim.',
+    mailIcon: 'https://img.icons8.com/clouds/100/000000/jake.png',
+    webSiteLink: 'http://localhost:3000',
+    webSiteLinkButton: 'Hadi Başlayalım!',
+    warningText: 'Şifre sıfırlama talebini siz yollamadıysanız, lütfen dikkate almayın !',
+    sincerelyText: 'Sevgilerle',
+    needHelpText: 'Yardım mı lazım?',
+    needHelpLink: 'http://erdemkosk.com',
   }));
 ```
 Register Mail:
@@ -48,11 +58,23 @@ Register Mail:
     email: 'testme-app@yandex.ru',
     nameSurname: 'Erdem Köşk',
     type: 'register',
+    appName: 'Test Me',
+    welcomeTitle: 'Hoş Geldin!',
+    welcomeMessage: 'Seni aramızda görmek çok güzel <b> nameSurname </b> ! <br/> İngilizce kelime öğrenmenin en kolay yolu 🤙. Boş zamanlarında senin için oluşturulan rastgele ingilizce kelime testlerini cevapla 🙏 Kendini geliştir!',
+    mailIcon: 'https://img.icons8.com/clouds/100/000000/america.png',
+    webSiteLink: 'http://localhost:3000',
+    webSiteLinkButton: 'Hadi Başlayalım!',
+    thanksText: 'Projemize destek verdiğin için teşekkür ederiz!',
+    sincerelyText: 'Sevgilerle',
+    needHelpText: 'Yardım mı lazım?',
+    needHelpLink: 'http://erdemkosk.com',
   }));
 ```
 When messages arrvied rabbitmq-mail-consumer-server, it controls mail in blacklist (from redis).
+
 If In Not Blacklist:
 ![In Not Blacklist](https://i.imgur.com/2cWUecy.png)
+
 If In Blacklist:
 ![In Blacklist](https://i.imgur.com/bFe9r4e.png)
 
@@ -82,7 +104,7 @@ There are two types of mail. Its type can be easily increased and different para
 - Forget
 
 Register:
-![Register](https://i.imgur.com/A6AjOVU.png)
+![Register](https://i.imgur.com/72AEhxE.png)
 Forget:
-![Forget](https://i.imgur.com/QnXD8Bg.png)
+![Forget](https://i.imgur.com/9up6jB3.png)
 

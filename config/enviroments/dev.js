@@ -13,8 +13,8 @@ module.exports = {
     password: process.env.REDIS_PASS || '',
   },
   mail: {
-    from: '"Test Me 👻" <admin@erdemkosk.com>',
-    subject: 'Test-Me\'den mesajınız var!',
+    from: process.env.MAIL_FROM || '"Test Me 👻" <admin@erdemkosk.com>',
+    subject: process.env.MAIL_SUBJECT || 'Test-Me\'den mesajınız var!',
     user: process.env.MAIL_USER || '',
     pass: process.env.MAIL_PASS || '',
     host: process.env.MAIL_HOST || '',

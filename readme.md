@@ -22,7 +22,7 @@ You need to add a mail adress to redis.
 ![Redis](https://i.imgur.com/saREwA7.png)
 ### Installation
 
-Rabbitmq-mail-consumer-server requires [Node.js](https://nodejs.org/) v4+ to run.
+Rabbitmq-mail-consumer-server requires [Node.js](https://nodejs.org/) v8+ to run.
 
 Install the dependencies and devDependencies and start the server.
 
@@ -30,6 +30,12 @@ Install the dependencies and devDependencies and start the server.
 $ cd rabbitmq-mail-consumer-server
 $ npm install 
 $ node app
+```
+For Docker:
+
+```sh
+$ docker build -t  rabbitmq-mail-consumer-server .
+$ docker run -p 5000:5000 rabbitmq-mail-consumer-server
 ```
 
 ### Running Stages

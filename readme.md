@@ -35,7 +35,7 @@ For Docker:
 
 ```sh
 $ docker build -t  rabbitmq-mail-consumer-server .
-$ docker run -p 5000:5000 rabbitmq-mail-consumer-server
+$ docker run --env-file .env -p 5000:5000 rabbitmq-mail-consumer-server
 ```
 
 ### Running Stages

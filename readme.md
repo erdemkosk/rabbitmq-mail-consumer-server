@@ -31,13 +31,23 @@ $ cd rabbitmq-mail-consumer-server
 $ npm install 
 $ node app
 ```
-For Docker:
+For Make A Docker Image:
 
 ```sh
 $ docker build -t  rabbitmq-mail-consumer-server .
 $ docker run --env-file .env -p 5000:5000 rabbitmq-mail-consumer-server
 ```
 
+Pull From Docker Hub
+
+- latest
+- rpi => ARM build for raspperry pi
+
+```sh
+$ docker run --env-file .env -p 5000:5000 erdemkosk/rabbitmq-mail-consumer-server:latest
+or
+$ docker run --env-file .env -p 5000:5000 erdemkosk/rabbitmq-mail-consumer-server:rpi
+```
 ### Running Stages
 You need to send messages from your server to rabbit mq channel when you need to send mail.
 Forget Password Mail:

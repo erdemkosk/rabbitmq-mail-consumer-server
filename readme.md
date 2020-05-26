@@ -48,6 +48,17 @@ $ docker run --env-file .env -p 5000:5000 erdemkosk/rabbitmq-mail-consumer-serve
 or
 $ docker run --env-file .env -p 5000:5000 erdemkosk/rabbitmq-mail-consumer-server:rpi
 ```
+For Docker-Compose
+
+- latest
+- rpi => ARM build for raspperry pi
+
+```sh
+$ docker-compose -f docker-compose-latest.yml up
+or
+$ docker-compose -f docker-compose-rpi.yml up
+```
+
 ### Running Stages
 You need to send messages from your server to rabbit mq channel when you need to send mail.
 Forget Password Mail:

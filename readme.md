@@ -1,5 +1,7 @@
 # rabbitmq-mail-consumer-server
 
+![Logo](https://i.imgur.com/z6YHS5I.png)
+
 Rabbitmq-mail-consumer-server is an independent mail sending server that abstracts the sending mails from system. Services that want to send mail do not need to know where and how this server works 😎. Just make sure you're looking at the same rabbit mq channel.
 
 > Sending mail is abstracted from the whole system. You don't have to think ✌️.

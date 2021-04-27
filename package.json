@@ -24,7 +24,7 @@
     "ioredis": "^4.16.3",
     "nodemailer": "^6.4.6",
     "nodemailer-express-handlebars": "^4.0.0",
-    "redis": "^3.0.2"
+    "redis": "^3.1.1"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
